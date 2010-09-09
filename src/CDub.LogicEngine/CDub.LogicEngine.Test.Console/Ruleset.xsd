@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by default user (Barnes&Noble.com) -->
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="opType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="eq"/>
+			<xs:enumeration value="lt"/>
+			<xs:enumeration value="gt"/>
+			<xs:enumeration value="ct"/>
+			<xs:enumeration value="sw"/>
+			<xs:enumeration value="ew"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="sourceType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="static"/>
+			<xs:enumeration value="input"/>
+			<xs:enumeration value="output"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="clauseType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="and"/>
+			<xs:enumeration value="or"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="rulesetBase">
+		<xs:sequence>
+			<xs:element name="testinput" type="testdataBase" minOccurs="0"/>
+			<xs:element name="testoutput" type="testdataBase" minOccurs="0"/>
+			<xs:element ref="rule" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ruleBase">
+		<xs:sequence>
+			<xs:element ref="conditions" minOccurs="0"/>
+			<xs:element name="success" type="actionsBase" minOccurs="0"/>
+			<xs:element name="failure" type="actionsBase" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:anySimpleType" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="conditionsBase">
+		<xs:sequence maxOccurs="unbounded">
+			<xs:group ref="conditionGroup"/>
+		</xs:sequence>
+		<xs:attribute name="not" type="xs:boolean" use="optional"/>
+		<xs:attribute name="op" type="clauseType" use="optional"/>
+	</xs:complexType>
+	<xs:complexType name="conditionBase">
+		<xs:all>
+			<xs:element name="input">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="source" type="sourceType"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="control">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:anySimpleType">
+							<xs:attribute name="source" type="sourceType" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+		<xs:attribute name="not" type="xs:boolean" use="optional"/>
+		<xs:attribute name="op" type="opType" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="actionsBase">
+		<xs:sequence>
+			<xs:group ref="actionGroup" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="outputBase">
+		<xs:sequence>
+			<xs:element name="key" type="xs:string"/>
+			<xs:element name="value">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:anySimpleType">
+							<xs:attribute name="source" type="sourceType" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:group name="conditionGroup">
+		<xs:choice>
+			<xs:element ref="condition"/>
+			<xs:element ref="conditions"/>
+		</xs:choice>
+	</xs:group>
+	<xs:group name="actionGroup">
+		<xs:choice>
+			<xs:element ref="rule"/>
+			<xs:element ref="output"/>
+		</xs:choice>
+	</xs:group>
+	<xs:element name="ruleset" type="rulesetBase"/>
+	<xs:element name="rule">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:extension base="ruleBase"/>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="condition" type="conditionBase"/>
+	<xs:element name="conditions" type="conditionsBase"/>
+	<xs:element name="actions" type="actionsBase"/>
+	<xs:element name="output" type="outputBase"/>
+	<xs:complexType name="NVPair">
+		<xs:sequence>
+			<xs:element name="key" type="xs:string"/>
+			<xs:element name="value" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="testdataBase">
+		<xs:sequence minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="entry" type="NVPair"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

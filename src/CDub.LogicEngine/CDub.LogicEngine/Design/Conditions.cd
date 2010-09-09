@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="CDub.LogicEngine.Conditions.And">
+    <Position X="17.75" Y="10.5" Width="4" />
+    <TypeIdentifier>
+      <FileName>Conditions\And.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Starts">
+    <Position X="7.25" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Conditions\Starts.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Clause">
+    <Position X="20" Y="7.75" Width="4" />
+    <TypeIdentifier>
+      <FileName>Conditions\Clause.cs</FileName>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAIAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Condition">
+    <Position X="18" Y="0.5" Width="4.75" />
+    <TypeIdentifier>
+      <FileName>Conditions\Condition.cs</FileName>
+      <HashCode>YQACAACAAAIAABAAAhKAEmAIAAAAAAA4DRxEAAIBJCA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Equal">
+    <Position X="10.75" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Conditions\Contains.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Ends">
+    <Position X="27.25" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Conditions\Ends.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Contains">
+    <Position X="34.25" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Conditions\Equal.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Greater">
+    <Position X="3.75" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Conditions\Greater.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Less">
+    <Position X="14.25" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Conditions\Less.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Null">
+    <Position X="30.75" Y="7.75" Width="2.75" />
+    <TypeIdentifier>
+      <FileName>Conditions\Null.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CDub.LogicEngine.Conditions.Or">
+    <Position X="22.5" Y="10.5" Width="4" />
+    <TypeIdentifier>
+      <FileName>Conditions\Or.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CDub.LogicEngine.Conditions.DataSource">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Conditions\Condition.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAEAAAAAAEAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

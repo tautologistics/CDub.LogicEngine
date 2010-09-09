@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDub.LogicEngine.Test.Console", "CDub.LogicEngine.Test.Console\CDub.LogicEngine.Test.Console.csproj", "{5C84C3F0-6358-4954-BEA5-7C93A1AD7EDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CDub.LogicEngine", "CDub.LogicEngine\CDub.LogicEngine.csproj", "{49D52972-126F-400F-963F-4E3043CBFDFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C84C3F0-6358-4954-BEA5-7C93A1AD7EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C84C3F0-6358-4954-BEA5-7C93A1AD7EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C84C3F0-6358-4954-BEA5-7C93A1AD7EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C84C3F0-6358-4954-BEA5-7C93A1AD7EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49D52972-126F-400F-963F-4E3043CBFDFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49D52972-126F-400F-963F-4E3043CBFDFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49D52972-126F-400F-963F-4E3043CBFDFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49D52972-126F-400F-963F-4E3043CBFDFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
